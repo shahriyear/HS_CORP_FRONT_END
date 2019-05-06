@@ -183,7 +183,7 @@
                                     <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
                                             class="mdi mdi-priority-low"></i><span class="hide-menu"> Customer Menu 2</span></a>
                                     </li>
-                                    
+
 
                                 </ul>
                                 <!--Second Level Menu End-->
@@ -598,9 +598,9 @@
                                         <tr>
                                             <!--Select Customer Start-->
                                             <th colspan="3">
-                                                <select class="form-control select2">
-                                                    <option>SIAM</option>
-                                                    <option>Milon</option>
+                                                <select class="form-control select2" id="customer_id">
+                                                    <option>SIAM - 01749798295</option>
+                                                    <option>Milon - 01750277150</option>
                                                     <option>Rashed</option>
                                                     <option>Anisur</option>
                                                 </select>
@@ -670,10 +670,10 @@
                                             <th style="width:11%">Code</th>
                                             <th style="width:20%">Product Name</th>
                                             <th style="width:10%">Unit</th>
-                                            <th style="width:10%">Quantity</th>
                                             <th style="width:5%">Bdls</th>
                                             <th style="width:10%">Sell Price</th>
-                                            <th style="width:10%">Reatil Price</th>
+                                            <th style="width:10%">Quantity</th>
+                                            <th style="width:10%">Retail Price</th>
                                         </tr>
 
                                         <!--Cart Item Row Start-->
@@ -684,33 +684,33 @@
 
                                             <td>1</td>
                                             <td>
-                                                <select class="form-control select2" id="product_1"></select></td>
+                                                <select class="form-control select2 products" id="product_1" onchange="onChangeProduct(1)">'></select></td>
                                             <td>1011</td>
                                             <td>Super Bike</td>
                                             <td>KG</td>
-                                            <td>
-                                                <input 
-                                                        tabindex="6" 
-                                                        type="number" 
-                                                        min="0"
-                                                        class="form-control text-right"
-                                                        placeholder="0"
-                                                />
-                                            </td>
                                             <td>6</td>
                                             <td class="p-0">
-                                                <input  
+                                                <input
                                                     readonly
-                                                    type="number" 
+                                                    type="number"
                                                     min="0"
                                                     class="form-control text-right"
                                                     placeholder="0"
                                                 />
                                             </td>
+                                            <td>
+                                                <input
+                                                        tabindex="6"
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control text-right"
+                                                        placeholder="0"
+                                                />
+                                            </td>
                                             <td class="p-0">
                                                 <input
                                                     readonly
-                                                    type="number" 
+                                                    type="number"
                                                     min="0"
                                                     class="form-control text-right"
                                                     placeholder="0"
@@ -718,21 +718,29 @@
                                             </td>
                                         </tr>
                                         <!--Cart Item Row End-->
-
+<!--                                        <tr><td colspan="10">&nbsp;</td></tr>-->
 
                                         <!--Notes And Total Start-->
                                         <tr>
-                                            <td colspan="2" rowspan="8"><strong>Notes</strong></td>
-                                            <td colspan="6" rowspan="8">
+                                            <td colspan="2" rowspan="2">Remarks</td>
+                                            <td colspan="4" rowspan="2">
                                                 <textarea
                                                         tabindex="12"
                                                         name=""
                                                         id=""
-                                                        cols="10"
-                                                        rows="9"
                                                         placeholder="Type Here..."></textarea>
                                             </td>
-                                            <td class="calculation">Total</td>
+                                            <td colspan="2" class="calculation">Actual Invoice</td>
+                                            <td class="p-0">
+                                                <input
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control text-right"
+                                                        value="3222.50"
+                                                        step="0.01"
+                                                />
+                                            </td>
                                             <td class="calculation p-0">
                                                 <input
                                                         readonly
@@ -743,12 +751,12 @@
                                                 />
                                             </td>
                                         </tr>
-                                        <!--Notes And Total  End-->
+                                        <!--Notes And Total End-->
 
-                                        <!--Val Start-->
+                                        <!--Weighting Start-->
                                         <tr>
-                                            <td class="calculation">Vat</td>
-                                            <td class="calculation p-0">
+                                            <td colspan="2" class="calculation">Weighting Charge</td>
+                                            <td colspan="2" class="calculation p-0">
                                                 <input
                                                         tabindex="8"
                                                         type="number"
@@ -758,39 +766,58 @@
                                                 />
                                             </td>
                                         </tr>
-                                        <!--Vat  End-->
+                                        <!--Weighting  End-->
 
-                                        <!--Freight Start-->
+                                        <!--Carting/Track Fare Start-->
                                         <tr>
-                                            <td class="calculation">Freight</td>
-                                            <td class="calculation p-0">
+                                            <td colspan="2" rowspan="5">Shipping Address</td>
+                                            <td colspan="4" rowspan="5">
+                                                <textarea
+                                                        tabindex="12"
+                                                        name=""
+                                                        id=""
+                                                        rows="5"
+                                                        placeholder="Type Here..."></textarea>
+                                            </td>
+                                            <td colspan="2" class="calculation">Carting/Track Fare</td>
+                                            <td colspan="2" class="calculation p-0">
                                                 <input
-                                                        tabindex="9"
-                                                        type="number" min="0"
+                                                        tabindex="8"
+                                                        type="number"
+                                                        min="0"
                                                         class="form-control"
                                                         placeholder="0.00"
                                                 />
                                             </td>
                                         </tr>
-                                        <!--Freight  End-->
-
-                                        <!--Discount Start-->
-                                        <tr>
-                                            <td class="calculation">Discount</td>
-                                            <td class="calculation p-0">
-                                                <input
-                                                        tabindex="10"
-                                                        type="number" min="0"
-                                                        class="form-control"
-                                                        placeholder="0.00"
-                                                />
-                                            </td>
-                                        </tr>
-                                        <!--Discount  End-->
+                                        <!--Carting/Track Fare  End-->
 
                                         <!--Grand Total Start-->
                                         <tr>
-                                            <td class="calculation">Grand Total</td>
+                                            <td colspan="2" class="calculation">Grand Total</td>
+                                            <td colspan="2" class="calculation p-0">
+                                                <input
+                                                        tabindex="8"
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Grand Total  End-->
+
+                                        <!--Discount Start-->
+                                        <tr>
+                                            <td colspan="2" class="calculation">Discount Amount (%) </td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="%"
+                                                />
+                                            </td>
                                             <td class="calculation p-0">
                                                 <input
                                                         readonly
@@ -801,26 +828,79 @@
                                                 />
                                             </td>
                                         </tr>
-                                        <!--Grand Total  End-->
+                                        <!--Discount  End-->
 
-                                        <!--Paid Start-->
+                                        <!--Discount Total Start-->
                                         <tr>
-                                            <td class="calculation">Paid</td>
-                                            <td class="calculation p-0">
+                                            <td colspan="2" class="calculation">Discount Total</td>
+                                            <td colspan="2" class="calculation p-0">
                                                 <input
-                                                        tabindex="11"
-                                                        type="number" min="0"
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
                                                         class="form-control"
                                                         placeholder="0.00"
                                                 />
                                             </td>
                                         </tr>
-                                        <!--Paid End-->
+                                        <!--Discount Total End-->
+
+                                        <!--Cash Receive Start-->
+                                        <tr>
+                                            <td colspan="2" class="calculation">Cash Receive</td>
+                                            <td colspan="2" class="calculation p-0">
+                                                <input
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Cash Receive End-->
+
+                                        <!--Bank Receive Start-->
+                                        <tr>
+                                            <td colspan="2">Bank</td>
+                                            <td colspan="4">
+                                                <select class="form-control select2">
+                                                    <option>DDBL</option>
+                                                    <option>Brac</option>
+                                                    <option>UCB</option>
+                                                </select>
+                                            </td>
+                                            <td colspan="2" class="calculation">Bank Receive</td>
+                                            <td colspan="2" class="calculation p-0">
+                                                <input
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Bank Receive End-->
 
                                         <!--Invoice Due Start-->
                                         <tr>
-                                            <td class="calculation">Invoice Due</td>
-                                            <td class="calculation p-0">
+                                            <td colspan="2">Types</td>
+                                            <td>
+                                                <select class="form-control select2">
+                                                    <option>DBBL</option>
+                                                    <option>Brac</option>
+                                                    <option>UCB</option>
+                                                </select>
+                                            </td>
+                                            <td>Number</td>
+                                            <td colspan="2" class="p-0">
+                                               <input
+                                                        readonly
+                                                        type="text"
+                                                        class="form-control"
+                                                />
+                                            </td>
+                                            <td colspan="2" class="calculation">Dues</td>
+                                            <td colspan="2" class="calculation p-0">
                                                 <input
                                                         readonly
                                                         type="number"
@@ -832,30 +912,11 @@
                                         </tr>
                                         <!--Invoice Due  End-->
 
-                                        <!--Total Due Start-->
-                                        <tr>
-                                            <td class="calculation">Total Due</td>
-                                            <td class="calculation p-0">
-                                                <input
-                                                        readonly
-                                                        type="number"
-                                                        min="0"
-                                                        class="form-control"
-                                                        placeholder="0.00">
-                                            </td>
-                                        </tr>
-                                        <!--Total Due  End-->
-
                                         <!--Save Button Start-->
                                         <tr>
-                                            <td colspan="8" class="p-0">
-                                                <button type="submit" class="btn btn-pinterest"><i
-                                                        class="fas fa-check"></i> Quotation
-                                                </button>
-                                                <button type="submit" class="btn btn-twitter"><i
-                                                        class="fas fa-check"></i> Save&Print
-                                                </button>
-                                                <button type="submit" class="btn btn-linkedin"><i
+                                            <td colspan="6"></td>
+                                            <td colspan="2" class="p-0">
+                                                <button type="submit" class="btn btn-linkedin" style="display: block; width: 100%"><i
                                                         class="fas fa-check"></i> Full Paid
                                                 </button>
                                             </td>
@@ -943,10 +1004,13 @@
 <script src="assets/datepicker/bootstrap-datepicker.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     jQuery(document).ready(function () {
+
         $('.datepicker').datepicker({
             autoclose: true,
             format: 'dd/mm/yyyy'
         });
+
+
 
     });
 
@@ -954,21 +1018,447 @@
 /********************************************************/
     /*Products Object*/
     var products = [
-        { 'Name':'CBR'},
-        { 'Name':'R15'},
-        { 'Name':'Repsol'},
-        { 'Name':'KTM'}
-    ];
+            {
+                "supplier": "Auto",
+                "code": "1010",
+                "product": "De-F-10 mm-Auto"
+            },
+            {
+                "supplier": "Auto",
+                "code": "1018",
+                "product": "De-F-12 mm-Auto"
+            },
+            {
+                "supplier": "Auto",
+                "code": "1026",
+                "product": "De-F-16 mm-Auto"
+            },
+            {
+                "supplier": "Auto",
+                "code": "1151",
+                "product": "De-F-20 mm-Auto"
+            },
+            {
+                "supplier": "Auto",
+                "code": "1108",
+                "product": "De-F-8 mm-Auto"
+            },
+            {
+                "supplier": "MAG",
+                "code": "1170",
+                "product": "De-F-10-mm-400-MAG"
+            },
+            {
+                "supplier": "MAG",
+                "code": "1174",
+                "product": "De-F-12-mm-400-MAG"
+            },
+            {
+                "supplier": "MAG",
+                "code": "1175",
+                "product": "De-F-16-mm-400-MAG"
+            },
+            {
+                "supplier": "MAG",
+                "code": "1206",
+                "product": "De-F-20-mm-400-MAG"
+            },
+            {
+                "supplier": "MAG",
+                "code": "1209",
+                "product": "De-F-8-mm-400-MAG"
+            },
+            {
+                "supplier": "FRESH",
+                "code": "1218",
+                "product": "De-F-20-mm-FRESH 500"
+            },
+            {
+                "supplier": "FRESH",
+                "code": "1219",
+                "product": "De-F-12-mm-FRESH 500"
+            },
+            {
+                "supplier": "FRESH",
+                "code": "1220",
+                "product": "De-F-16-mm-FRESH 500"
+            },
+            {
+                "supplier": "FRESH",
+                "code": "1221",
+                "product": "De-F-20-mm-FRESH 500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1189",
+                "product": "De-F-10-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1188",
+                "product": "De-F-10-mm-BANDAR-500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1191",
+                "product": "De-F-12-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1190",
+                "product": "De-F-12-mm-BANDAR-500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1193",
+                "product": "De-F-16-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1192",
+                "product": "De-F-16-mm-BANDAR-500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1195",
+                "product": "De-F-20-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1194",
+                "product": "De-F-20-mm-BANDAR-500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1197",
+                "product": "De-F-22-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1196",
+                "product": "De-F-22-mm-BANDAR-500"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1199",
+                "product": "De-F-25-mm-BANDAR-400"
+            },
+            {
+                "supplier": "BANDAR",
+                "code": "1198",
+                "product": "De-F-25-mm-BANDAR-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1212",
+                "product": "De-F-10-mm-ANWARS-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1213",
+                "product": "De-F-12-mm-ANWARS-501"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1214",
+                "product": "De-F-16-mm-ANWARS-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1215",
+                "product": "De-F-20-mm-ANWARS-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1216",
+                "product": "De-F-22-mm-ANWARS-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1217",
+                "product": "De-F-25-mm-ANWARS-500"
+            },
+            {
+                "supplier": "ANWARS",
+                "code": "1211",
+                "product": "De-F-8-mm-ANWARS-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1091",
+                "product": "De-F-10-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1092",
+                "product": "De-F-12-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1093",
+                "product": "De-F-16-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1094",
+                "product": "De-F-20-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1095",
+                "product": "De-F-22-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1096",
+                "product": "De-F-25-mm-SALAM-500"
+            },
+            {
+                "supplier": "SALAM",
+                "code": "1111",
+                "product": "De-F-8-mm-SALAM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1009",
+                "product": "De-F-10-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1139",
+                "product": "De-F-10-mm-RAHM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1017",
+                "product": "De-F-12-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1140",
+                "product": "De-F-12-mm-RAHM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1025",
+                "product": "De-F-16-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1141",
+                "product": "De-F-16-mm-RAHM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1034",
+                "product": "De-F-20-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1142",
+                "product": "De-F-20-mm-RAHM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1039",
+                "product": "De-F-22-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1143",
+                "product": "De-F-22-mm-RAHM-500"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1043",
+                "product": "De-F-25-mm-RAHM-400"
+            },
+            {
+                "supplier": "RAHIM",
+                "code": "1144",
+                "product": "De-F-25-mm-RAHM-500"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1112",
+                "product": "De-F-10-mm-KABIR-400"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1008",
+                "product": "De-F-10-mm-KABIR-500"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1015",
+                "product": "De-F-12-mm-KABIR-400"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1014",
+                "product": "De-F-12-mm-KABIR-500"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1023",
+                "product": "De-F-16-mm-KABIR-400"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1022",
+                "product": "De-F-16-mm-KABIR-500"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1113",
+                "product": "De-F-20-mm-KABIR-400"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1031",
+                "product": "De-F-20-mm-KABIR-500"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1037",
+                "product": "De-F-22-mm-KABIR-500,"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1041",
+                "product": "De-F-25-mm-KABIR-500,"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1119",
+                "product": "De-F-28-mm-KABIR-500,"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1183",
+                "product": "De-F-32-mm-KABIR-500,"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1049",
+                "product": "De-F-8-mm-60-KABIR-400"
+            },
+            {
+                "supplier": "KABIR",
+                "code": "1154",
+                "product": "De-F-8-mm-KABIR-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1002",
+                "product": "De-F-10-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1013",
+                "product": "De-F-12-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1114",
+                "product": "De-F-16-mm-BSRM-400"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1021",
+                "product": "De-F-16-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1030",
+                "product": "De-F-20-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1004",
+                "product": "De-F-22-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1045",
+                "product": "De-F-25-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1187",
+                "product": "De-F-23-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1186",
+                "product": "De-F-50-mm-BSRM-500"
+            },
+            {
+                "supplier": "BSRM",
+                "code": "1048",
+                "product": "De-F-8-mm-BSRM-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1098",
+                "product": "De-F-10-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1067",
+                "product": "De-F-12-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1068",
+                "product": "De-F-16-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1069",
+                "product": "De-F-20-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1070",
+                "product": "De-F-22-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1071",
+                "product": "De-F-25-mm-AKS-500"
+            },
+            {
+                "supplier": "AKS",
+                "code": "1066",
+                "product": "De-F-8-mm-AKS-500"
+            }
+        ];
+
+
 
     /*Global Products*/
     var product_list='';
+    product_list='<option value="">Select a Product</option>'
     $.each(products, function (index,val) {
-        product_list += '<option>'+val.Name+'</option>';
+        product_list += '<option value="'+val.code+'">'+val.product+'</option>';
     });
 
-    $('#product_1').html(product_list);
+    $("#product_1").html(product_list);
 /********************************************************/
 
+    /*Fetch Data By Product Code*/
+    function onChangeProduct(id) {
+            var code = $('#product_'+id).val();
+
+        jQuery.map(products, function(obj) {
+            if(obj.code === code){
+                $('#addToCartTr_'+id +' td:eq(3)').text(obj.code);
+                $('#addToCartTr_'+id +' td:eq(4)').text(obj.product);
+            }
+        });
+
+    }
 
 
     /*Add A New Cart Row*/
@@ -986,35 +1476,16 @@
             '<td class="p-0" id="addToCartTd_' + p_counter_new + '"><a class="btn" id="addToCartBtn" onclick="addNewRow(event,  ' + p_counter_new + ')" href="#"><i class="mdi mdi-plus-circle-outline text-success"></i></a></td>' +
             '<td>' + p_counter_new + '</td>' +
             '<td>' +
-                '<select class="form-control select2">' + product_list +'</select>' +
+                '<select class="form-control select2 products" id="product_'+p_counter_new+'" onchange="onChangeProduct('+p_counter_new+')">' + product_list +'</select>' +
             '</td>' +
-            '<td>R15</td>' +
+            '<td>1012</td>' +
             '<td>Super Bike</td>' +
-            '<td>' +
-            '<select class="form-control select2">' +
-            '<option>---Select one---</option>' +
-            '<option>Bacth 01</option>' +
-            '<option>Bacth 02</option>' +
-            '<option>Bacth 03</option>' +
-            '<option>Bacth 04</option>' +
-            '</select>' +
-            '</td>' +
-            '<td>' +
-            '<select class="form-control select2">' +
-            '<option>---Select one---</option>' +
-            '<option>Warehouse 01</option>' +
-            '<option>Warehouse 02</option>' +
-            '<option>Warehouse 03</option>' +
-            '<option>Warehouse 04</option>' +
-            '</select>' +
-            '</td>' +
-            '<td>120</td>' +
-            '<td>5,25,000</td>' +
-            '<td><input tabindex="6" type="number" min="0" class="form-control text-right" placeholder="0"/></td>' +
-            '<td><input tabindex="7" type="number" min="0" class="form-control text-right" placeholder="25,000"/></td>' +
-            '<td class="p-0"><input readonly type="number" min="0" class="form-control text-right" placeholder="5,00,000.00"></td>' +
+            '<td>KG</td>' +
+            '<td>9</td>' +
+            '<td class="p-0"><input readonly type="number" min="0" class="form-control text-right" placeholder="0"/></td>' +
+            '<td><input type="number" min="0" class="form-control text-right" placeholder="0"/></td>' +
+            '<td class="p-0"><input readonly type="number" min="0" class="form-control text-right" placeholder="0"/></td>' +
             '</tr>';
-
 
         //Remove Cart Btn and Add Remove Btn
         $('#addToCartTd_' + trId).html('<a class="btn  remove" onclick="remove(event, ' + trId + ')" href="#"> <i class="mdi mdi-minus-circle-outline text-danger"></i></a>');
@@ -1055,6 +1526,10 @@
     $("#salesForm").submit(function (e) {
          return false;
     });
+
+
+
+
 
 </script>
 </body>
