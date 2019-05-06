@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>ThemeBull</title>
+    <!-- Custom CSS -->
+    <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link href="assets/dist/css/style.min.css" rel="stylesheet">
+    <link href="assets/dist/css/custom_style.css" rel="stylesheet">
+    <link href="assets/datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/libs/select2/dist/css/select2.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+
+<body>
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div class="preloader">
+    <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <header class="topbar hidethis" style="display: block">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header">
+                <!-- This is for the sidebar toggle which is visible on mobile only -->
+                <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                    <i class="ti-menu ti-close"></i>
+                </a>
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <!--                            <img src="assets/images/logo.png" alt="homepage" class="dark-logo"/>-->
+                            <!-- Light Logo icon -->
+                            <!--                            <img src="assets/images/logo-light-icon.png" alt="homepage" class="light-logo"/>-->
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                                <!-- dark Logo text -->
+                                <img src="assets/images/logo.png" alt="homepage" class="dark-logo" width="100"
+                                     height="80"/>
+                            <!-- Light Logo text -->
+                            <!--                                <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage"/>-->
+                            </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Toggle which is visible on mobile only -->
+                <!-- ============================================================== -->
+                <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                   data-toggle="collapse" data-target="#navbarSupportedContent"
+                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="ti-more"></i>
+                </a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav float-left mr-auto cphone">
+                    <!-- <li class="nav-item d-none d-md-block">
+                        <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar">
+                            <i class="mdi mdi-menu font-24"></i>
+                        </a>
+                    </li> -->
+                    <!-- ============================================================== -->
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+
+                    <!-- ============================================================== -->
+                    <!-- End Comment -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/images/users/2.jpg" alt="user" class="rounded-circle" width="33">
+                            <span class="m-l-5 font-medium d-none d-sm-inline-block">Jonathan Doe <i
+                                    class="mdi mdi-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <span class="with-arrow">
+                                    <span class="bg-primary"></span>
+                                </span>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <!--Main Menu Header Start-->
+                <ul id="sidebarnav">
+                    <!-- User Profile-->
+                    <li class="sidebar-item">
+                        <a href="index.html" class="sidebar-link">
+                            <i class="mdi mdi-arrange-bring-to-front"></i>
+                            <span class="hide-menu">HS Corporation</span>
+                        </a>
+                    </li>
+
+
+                    <!-- Back Office Main Menu-->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark" href="demo.html"
+                           aria-expanded="false">
+                            <i class="mdi mdi-collage"></i>
+                            <span class="hide-menu">Back Office</span>
+                        </a>
+                        <!--First Level Menu-->
+                        <ul aria-expanded="false" class="collapse first-level">
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Customer Payment</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Customer Menu 1</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Customer Menu 2</span></a>
+                                    </li>
+                                    
+
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Edit Invoice</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Product Price Setup</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Product Information</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Bank Information</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Accounts</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Accounts Menu 1</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Accounts Menu 2</span></a>
+                                    </li>
+
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+
+
+                        </ul>
+                        <!--First Level Menu End-->
+                    </li>
+                    <!--Back Office Main Menu End-->
+
+                    <!--Front Office Main Menu-->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark" href="demo.html"
+                           aria-expanded="false">
+                            <i class="mdi mdi-collage"></i>
+                            <span class="hide-menu">Front Office</span>
+                        </a>
+                        <!--First Level Menu-->
+                        <ul aria-expanded="false" class="collapse first-level">
+
+                            <li class="sidebar-item">
+                                <a href="sale-form.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Sales</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">Sales List</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!--First Level Menu End-->
+                    </li>
+                    <!--Front Office Main Menu End-->
+
+                    <!--Factory Sales Main Menu-->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark" href="demo.html"
+                           aria-expanded="false">
+                            <i class="mdi mdi-collage"></i>
+                            <span class="hide-menu">Factory Sales</span>
+                        </a>
+                        <!--First Level Menu-->
+                        <ul aria-expanded="false" class="collapse first-level">
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">FS Menu 1</span>
+                                </a>
+                            </li>
+
+                             <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">FS Menu 2</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!--First Level Menu End-->
+                    </li>
+                    <!--Factory Sales Main Menu End-->
+
+                    <!--User Information Main Menu-->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark" href="demo.html"
+                           aria-expanded="false">
+                            <i class="mdi mdi-collage"></i>
+                            <span class="hide-menu">User Information</span>
+                        </a>
+                        <!--First Level Menu-->
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">UI Menu 1</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="chart-c3-axis.html" class="sidebar-link">
+                                    <i class="mdi mdi-arrange-bring-to-front"></i>
+                                    <span class="hide-menu">UI Menu 2</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!--First Level Menu End-->
+                    </li>
+                    <!--User Information Main Menu End-->
+
+
+                    <!-- Reports Main Menu-->
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark" href="demo.html"
+                           aria-expanded="false">
+                            <i class="mdi mdi-collage"></i>
+                            <span class="hide-menu">Reports</span>
+                        </a>
+                        <!--First Level Menu-->
+                        <ul aria-expanded="false" class="collapse first-level">
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Customer Report</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu">CP Menu 1</span></a>
+                                    </li>
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Purchase Report</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu">Supplier Information</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu">Supplier Sales Report</span></a>
+                                    </li>
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Sales Report</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level" style="width: 290px !important;">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Date Wise Sales Invoice Report</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Customer Wise Previous Dues</span></a>
+                                    </li>
+                                     <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Date Wise Sales Summery</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Cancel Invoice List</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Sale Return Master</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Sales Report</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Item Wise Sales Summery</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Item Wise Sale Rate</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Track Fare & Weight Charge Report</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu"> Collection Ledger</span></a>
+                                    </li>
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                   aria-expanded="false">
+                                    <i class="mdi mdi-collage"></i>
+                                    <span class="hide-menu">Product</span></a>
+                                <!--Second Level Menu-->
+                                <ul aria-expanded="false" class="collapse second-level">
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu">Product Stock Status</span></a>
+                                    </li>
+                                    <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><i
+                                            class="mdi mdi-priority-low"></i><span class="hide-menu">Product Adjustment</span></a>
+                                    </li>
+                                </ul>
+                                <!--Second Level Menu End-->
+                            </li>
+                        </ul>
+                        <!--First Level Menu End-->
+                    </li>
+                    <!-- Reports Main Menu End-->
+
+                    <!--Login User Profile Start-->
+                    <li class="nav-item dropdown tests">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="#"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="assets/images/users/2.jpg" alt="user" class="rounded-circle" width="33">
+                            <span class="m-l-5 font-medium d-none d-sm-inline-block">Shahriyear <i
+                                    class="mdi mdi-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY test">
+                                <span class="with-arrow">
+                                    <span class="bg-primary"></span>
+                                </span>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="javascript:void(0)">
+                                <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                        </div>
+                    </li>
+                    <!--Login User Profile End-->
+
+                </ul>
+                <!--Main Menu Header End-->
+
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Submenu Header Start -->
+            <!-- ============================================================== -->
+            <div class="row submenu_style">
+                <div class="col-md-12">
+                    <div class="card border-warning">
+                        <div class="card-body">
+                            <ul aria-expanded="false" class="collapse first-level show">
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Customer</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Payment</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Sales</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Sale Return</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Sale List</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Purchase</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Payment</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="chart-c3-axis.html" class="sidebar-link">
+                                        <i class="mdi mdi-arrange-bring-to-front"></i>
+                                        <span class="hide-menu">Product</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- Submenu Header End -->
+            <!-- ============================================================== -->
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-success">
+                        <div class="card-header bg-secondary">
+                            <h4 class="m-b-0"><i class="m-r-10 mdi mdi-home"></i>Sales Invoice</h4></div>
+
+                        <div class="card-body">
+
+                            <div class="row saleform">
+                                <form id="salesForm" style="width: 100%">
+                                    <input type="hidden" id="product_counter" value="1">
+                                    <table id="cartTable" class="table table-sm  table-bordered">
+
+                                        <!--Table Head Invoice Code, Date, Customer Info Start-->
+                                        <thead>
+                                        <!--Invoice No, Date Row Start-->
+                                        <!--Invoice No, Date Row Start-->
+                                        <tr>
+                                            <!--Invoice Code Start-->
+                                            <th colspan="3">Invoice Code</th>
+                                            <th colspan="2">
+                                                <input
+                                                        name="invoice_code"
+                                                        id="invoice_code"
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="#INV-2019042701"
+                                                        readonly
+                                                />
+                                            </th>
+                                            <!--Invoice Code End-->
+                                            <th class="text-right">Warehouse</th>
+                                            <th colspan="2">
+                                                <select class="form-control select2">
+                                                    <option selected="selected">Main Office</option>
+                                                    <option>Factory</option>
+                                                </select>
+                                            </th>
+                                            <th class="text-right">Date</th>
+                                            <!--Invoice Date Start-->
+                                            <th>
+                                                <input
+                                                        name="invoice_date"
+                                                        id="invoice_date"
+                                                        type="text"
+                                                        class="datepicker form-control"
+                                                        placeholder="dd/mm/yyyy"
+                                                />
+                                            </th>
+                                            <!--Invoice Date End-->
+                                        </tr>
+                                        <!--Invoice No, Date Row End-->
+
+                                        <!--Customer Info Row Start-->
+                                        <tr>
+                                            <!--Select Customer Start-->
+                                            <th colspan="3">
+                                                <select class="form-control select2">
+                                                    <option>SIAM</option>
+                                                    <option>Milon</option>
+                                                    <option>Rashed</option>
+                                                    <option>Anisur</option>
+                                                </select>
+                                            </th>
+                                            <!--Select Customer End-->
+
+                                            <!--Customer Name Start-->
+                                            <th colspan="2">
+                                                <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Name"
+                                                />
+                                            </th>
+                                            <!--Customer Name End-->
+
+                                            <!--Customer Phone Start-->
+                                            <th>
+                                                <input
+                                                        name=""
+                                                        id="phone"
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Phone"
+                                                />
+                                            </th>
+                                            <!--Customer Phone End-->
+
+                                            <!--Customer Address Start-->
+                                            <th colspan="3">
+                                                <input
+                                                        name=""
+                                                        id="address"
+                                                        readonly=""
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Address"
+                                                />
+                                            </th>
+                                            <!--Customer Address End-->
+
+                                            <!--Customer Previous Due Start-->
+                                            <th>
+                                                <input
+                                                        name=""
+                                                        id="pd"
+                                                        readonly
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Previous Due"
+                                                />
+                                            </th>
+                                            <!--Customer Previous Due End-->
+
+                                        </tr>
+                                        <!--Customer Info Row End-->
+                                        </thead>
+                                        <!--Table Head Invoice Code, Date, Customer Info End-->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                        <!--Table Body Start /  Cart Items List-->
+                                        <tbody class="text-center" id="table-body">
+                                        <tr>
+                                            <th style="width:2%"><i class="fa fa-wrench"></i></th>
+                                            <th style="width:2%">No.</th>
+                                            <th style="width:20%">Product</th>
+                                            <th style="width:11%">Code</th>
+                                            <th style="width:20%">Product Name</th>
+                                            <th style="width:10%">Unit</th>
+                                            <th style="width:10%">Quantity</th>
+                                            <th style="width:5%">Bdls</th>
+                                            <th style="width:10%">Sell Price</th>
+                                            <th style="width:10%">Reatil Price</th>
+                                        </tr>
+
+                                        <!--Cart Item Row Start-->
+                                        <tr class="cart_item saleBtn" id="addToCartTr_1">
+                                            <td class="p-0" id="addToCartTd_1">
+                                                <a class="btn" id="addToCartBtn_1" href="#" onclick="addNewRow(event,  1)"> <i class="mdi mdi-plus-circle-outline text-success"></i></a>
+                                            </td>
+
+                                            <td>1</td>
+                                            <td>
+                                                <select class="form-control select2" id="product_1"></select></td>
+                                            <td>1011</td>
+                                            <td>Super Bike</td>
+                                            <td>KG</td>
+                                            <td>
+                                                <input 
+                                                        tabindex="6" 
+                                                        type="number" 
+                                                        min="0"
+                                                        class="form-control text-right"
+                                                        placeholder="0"
+                                                />
+                                            </td>
+                                            <td>6</td>
+                                            <td class="p-0">
+                                                <input  
+                                                    readonly
+                                                    type="number" 
+                                                    min="0"
+                                                    class="form-control text-right"
+                                                    placeholder="0"
+                                                />
+                                            </td>
+                                            <td class="p-0">
+                                                <input
+                                                    readonly
+                                                    type="number" 
+                                                    min="0"
+                                                    class="form-control text-right"
+                                                    placeholder="0"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Cart Item Row End-->
+
+
+                                        <!--Notes And Total Start-->
+                                        <tr>
+                                            <td colspan="2" rowspan="8"><strong>Notes</strong></td>
+                                            <td colspan="6" rowspan="8">
+                                                <textarea
+                                                        tabindex="12"
+                                                        name=""
+                                                        id=""
+                                                        cols="10"
+                                                        rows="9"
+                                                        placeholder="Type Here..."></textarea>
+                                            </td>
+                                            <td class="calculation">Total</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Notes And Total  End-->
+
+                                        <!--Val Start-->
+                                        <tr>
+                                            <td class="calculation">Vat</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        tabindex="8"
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Vat  End-->
+
+                                        <!--Freight Start-->
+                                        <tr>
+                                            <td class="calculation">Freight</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        tabindex="9"
+                                                        type="number" min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Freight  End-->
+
+                                        <!--Discount Start-->
+                                        <tr>
+                                            <td class="calculation">Discount</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        tabindex="10"
+                                                        type="number" min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Discount  End-->
+
+                                        <!--Grand Total Start-->
+                                        <tr>
+                                            <td class="calculation">Grand Total</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Grand Total  End-->
+
+                                        <!--Paid Start-->
+                                        <tr>
+                                            <td class="calculation">Paid</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        tabindex="11"
+                                                        type="number" min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Paid End-->
+
+                                        <!--Invoice Due Start-->
+                                        <tr>
+                                            <td class="calculation">Invoice Due</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <!--Invoice Due  End-->
+
+                                        <!--Total Due Start-->
+                                        <tr>
+                                            <td class="calculation">Total Due</td>
+                                            <td class="calculation p-0">
+                                                <input
+                                                        readonly
+                                                        type="number"
+                                                        min="0"
+                                                        class="form-control"
+                                                        placeholder="0.00">
+                                            </td>
+                                        </tr>
+                                        <!--Total Due  End-->
+
+                                        <!--Save Button Start-->
+                                        <tr>
+                                            <td colspan="8" class="p-0">
+                                                <button type="submit" class="btn btn-pinterest"><i
+                                                        class="fas fa-check"></i> Quotation
+                                                </button>
+                                                <button type="submit" class="btn btn-twitter"><i
+                                                        class="fas fa-check"></i> Save&Print
+                                                </button>
+                                                <button type="submit" class="btn btn-linkedin"><i
+                                                        class="fas fa-check"></i> Full Paid
+                                                </button>
+                                            </td>
+                                            <td class="p-0">
+                                                <button tabindex="14" style="display: block; width: 100%" type="submit"
+                                                        class="btn btn-warning">
+                                                    <i class="fas fa-times"></i> Cancel
+                                                </button>
+                                            </td>
+                                            <td class="p-0">
+                                                <button tabindex="13" style="display: block; width: 100%" type="submit"
+                                                        class="btn btn-success">
+                                                    <i class="fas fa-check"></i> Sale
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!--Save Button End-->
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+            All Rights Reserved by ThemeBull. Developed by
+            <a href="#">ThemeBull</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- customizer Panel -->
+<!-- ============================================================== -->
+
+
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- apps -->
+<script src="assets/dist/js/app.min.js"></script>
+<script src="assets/dist/js/app.init.horizontal.js"></script>
+<script src="assets/dist/js/app-style-switcher.horizontal.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="assets/extra-libs/sparkline/sparkline.js"></script>
+<!--Wave Effects -->
+<script src="assets/dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="assets/dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="assets/dist/js/custom.js"></script>
+<!--This page JavaScript -->
+<script src="assets/libs/select2/dist/js/select2.full.min.js"></script>
+<script src="assets/libs/select2/dist/js/select2.min.js"></script>
+<script src="assets/dist/js/pages/forms/select2/select2.init.js"></script>
+<!--chartis chart-->
+
+<script src="assets/datepicker/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $('.datepicker').datepicker({
+            autoclose: true,
+            format: 'dd/mm/yyyy'
+        });
+
+    });
+
+
+/********************************************************/
+    /*Products Object*/
+    var products = [
+        { 'Name':'CBR'},
+        { 'Name':'R15'},
+        { 'Name':'Repsol'},
+        { 'Name':'KTM'}
+    ];
+
+    /*Global Products*/
+    var product_list='';
+    $.each(products, function (index,val) {
+        product_list += '<option>'+val.Name+'</option>';
+    });
+
+    $('#product_1').html(product_list);
+/********************************************************/
+
+
+
+    /*Add A New Cart Row*/
+    function addNewRow(e, trId) {
+        e.preventDefault();
+
+        //get total number of cart item rows length
+        var ln = $('tr.cart_item').length;
+
+        // product counter
+        var p_counter = parseInt($('#product_counter').val());
+        var p_counter_new = (p_counter + 1);
+
+        var newTr = '<tr class="cart_item saleBtn" id="addToCartTr_' + p_counter_new + '">' +
+            '<td class="p-0" id="addToCartTd_' + p_counter_new + '"><a class="btn" id="addToCartBtn" onclick="addNewRow(event,  ' + p_counter_new + ')" href="#"><i class="mdi mdi-plus-circle-outline text-success"></i></a></td>' +
+            '<td>' + p_counter_new + '</td>' +
+            '<td>' +
+                '<select class="form-control select2">' + product_list +'</select>' +
+            '</td>' +
+            '<td>R15</td>' +
+            '<td>Super Bike</td>' +
+            '<td>' +
+            '<select class="form-control select2">' +
+            '<option>---Select one---</option>' +
+            '<option>Bacth 01</option>' +
+            '<option>Bacth 02</option>' +
+            '<option>Bacth 03</option>' +
+            '<option>Bacth 04</option>' +
+            '</select>' +
+            '</td>' +
+            '<td>' +
+            '<select class="form-control select2">' +
+            '<option>---Select one---</option>' +
+            '<option>Warehouse 01</option>' +
+            '<option>Warehouse 02</option>' +
+            '<option>Warehouse 03</option>' +
+            '<option>Warehouse 04</option>' +
+            '</select>' +
+            '</td>' +
+            '<td>120</td>' +
+            '<td>5,25,000</td>' +
+            '<td><input tabindex="6" type="number" min="0" class="form-control text-right" placeholder="0"/></td>' +
+            '<td><input tabindex="7" type="number" min="0" class="form-control text-right" placeholder="25,000"/></td>' +
+            '<td class="p-0"><input readonly type="number" min="0" class="form-control text-right" placeholder="5,00,000.00"></td>' +
+            '</tr>';
+
+
+        //Remove Cart Btn and Add Remove Btn
+        $('#addToCartTd_' + trId).html('<a class="btn  remove" onclick="remove(event, ' + trId + ')" href="#"> <i class="mdi mdi-minus-circle-outline text-danger"></i></a>');
+
+        //Set New Row as a Last Row Of cart List and select2 updated
+        $('#table-body tr:eq(' + ln + ')').after(newTr);
+        $('.select2').select2();
+
+        // set new value for product counter
+        $('#product_counter').val(p_counter_new);
+        //rearrange the serial number
+        rearrange();
+    }
+
+
+    /*
+    *   Remove Cart Item By addToCartTr id
+    */
+    function remove(e, trid) {
+        e.preventDefault();
+        $('#addToCartTr_' + trid).remove();
+        rearrange();
+        return false;
+    }
+
+
+    /*
+    *   Rearrange The Serial Number
+    *   Called In : remove() and addNewRow()
+    */
+    function rearrange() {
+        var i = 1;
+        $('tr.cart_item').each(function () {
+            $(this).find("td").eq(1).text(i++);
+        });
+    }
+
+    $("#salesForm").submit(function (e) {
+         return false;
+    });
+
+</script>
+</body>
+
+
+</html>

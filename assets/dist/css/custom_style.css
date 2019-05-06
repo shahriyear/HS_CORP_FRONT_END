@@ -1,0 +1,163 @@
+
+.submenu_style ul{
+    margin: 0;
+    padding: 0;
+    margin: 2px 0;
+}
+.submenu_style  ul li{
+    display: inline-block !important;
+}
+.submenu_style  ul li a{
+    padding: 5px 10px;
+    border-radius: 60px;
+    background: #233242;
+    display: block;
+    color: #949ba3;
+    transition: all .4s;
+    font-size: 12px;
+}
+.submenu_style  ul li a.parent{
+    background: #3cb0ff !important;
+    color: #fff;
+}
+.submenu_style  ul li a:hover{
+    background: #233242;
+    color: #fff;
+}
+.page-breadcrumb.submenu_style{
+    padding: 0 20px 0;
+}
+
+.page-content-header {
+    margin: 4px 20px 0px;
+    width: 100%;
+}
+.page-content-header .card, .page-content-body .card{
+    margin-bottom: 0;
+}
+.submenu_style .card{
+    margin-bottom: 0;
+    width: 100%;
+}
+.submenu_style .card-body{
+    padding: 4px 20px;
+}
+
+
+@media (max-width: 767px) {
+    .page-breadcrumb.submenu_style{
+        display: none;
+    }
+}
+
+
+
+.saleform .table thead th{
+    border:0 !important;
+}
+
+.saleform .table  td, .saleform .table  th{
+    border: .5px solid #ccc;
+}
+.page-wrapper{
+    background: #fff !important;
+}
+.page-wrapper > .container-fluid {
+    padding: 0 20px !important;
+}
+.card{
+    margin-top: 4px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1) !important;
+}
+.card-header{
+    padding: 8px 10px;
+    background: linear-gradient(to bottom,#FFF 0,#EEE 100%);
+    border-bottom: 1px solid #DDD;
+}
+.card-body {
+    padding: 10px 20px;
+    border-top: 0;
+}
+.table td, .table th{
+    vertical-align: middle !important;;
+}
+table.table tbody input ,table.table tbody textarea{
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+.saleform tbody td{
+    padding: .1rem .3rem;
+  }
+.saleform tbody tr th {
+    background: #f7f7f7;
+}
+  .saleform tbody .form-control, .saleform tbody select{
+    height:  calc(.75em + .75rem + 2px);
+    padding: 0;
+    border: 0;
+}
+.saleform thead .form-control, .form-control:disabled, .form-control[readonly], .form-control, .col-form-label{
+    height:  calc(.75em + .75rem + 2px);
+}
+.col-form-label{
+    padding-top: 0 !important;
+}
+.form-group {
+    margin-bottom: .2rem !important;
+}
+.form-control:disabled, .form-control[readonly]{
+    border-color: rgba(0, 0, 0, .25);
+}
+.formmtop #default_order_wrapper{
+    margin-top: 20px;
+}
+.saleform tbody .select2-container--default .select2-selection--single {
+    border: 0 !important;
+}
+.saleform .btn.btn-primary , .saleform .btn.btn-sm {
+    font-size: .45rem;
+    display: block;
+}
+.select2.select2-container{
+    width: 100% !important;
+}
+/*.calculation-total{
+    text-align: right;
+}*/
+.calculation, .calculation input{
+    text-align: right;
+    font-weight: 500;
+}
+.select2-container .select2-selection--single{
+    border-color: #e9ecef !important;
+    border-radius: 2px !important;
+    height: 24.5px !important;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: .875rem !important;
+}
+.select2-selection__rendered{
+    height: 100% !important;
+    line-height: 26px !important;
+    font-size: .875rem !important;
+    font-weight: 400 !important;
+}
+button.btn{
+    border-radius: 0;
+}
+button.btn:focus{
+    box-shadow: unset !important;
+}
+tr.saleBtn td{
+    padding: 0rem .3rem;
+}
+tr.saleBtn td a, tr.saleBtn td button{
+    display: block;
+    padding: 0rem !important;
+    margin: 0 auto;
+}
+.saleform textarea{
+    resize: none;
+}
